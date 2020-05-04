@@ -1,0 +1,27 @@
+<!-- <h3>Lecciones de la materia</h3>
+<app-lessons-list></app-lessons-list> -->
+
+<mat-sidenav-container class="detail-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <button mat-raised-button color="primary" (click)="sidenav.toggle()">
+      <mat-icon aria-hidden="false" aria-label="Example close icon"
+        >close</mat-icon
+      >
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="container">
+    <p>
+      <button mat-raised-button color="primary" (click)="sidenav.toggle()">
+        <mat-icon aria-hidden="false" aria-label="Example drag_handle icon"
+          >drag_handle</mat-icon
+        >
+        Menu
+      </button>
+    </p>
+    <h3>Lecciones de la materia</h3>
+
+    <!-- <app-lessons-list></app-lessons-list> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,26 @@
+<mat-card class="cardMaterial">
+  <app-material></app-material>
+
+  <mat-card-content class="input-message">
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Mensaje</mat-label>
+        <input
+          matInput
+          placeholder="Mensaje"
+          [formControl]="messageForm"
+          type="text"
+        />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="messageForm.invalid"
+      >
+        Enviar
+      </button>
+    </div>
+    <app-material-chat></app-material-chat>
+  </mat-card-content>
+</mat-card>

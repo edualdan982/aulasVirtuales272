@@ -1,0 +1,21 @@
+<mat-card class="card-course">
+  <mat-card-header>
+    <mat-card-title>{{ course.sigla }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="https://images.pexels.com/photos/459403/pexels-photo-459403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content class="content">
+    <p>{{ course.nombre }}</p>
+    <mat-card-actions>
+      <a
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/courses', course.sigla]"
+        >Ingresar</a
+      >
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
